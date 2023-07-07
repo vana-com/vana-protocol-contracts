@@ -3,7 +3,7 @@ pragma solidity ^0.8.9;
 
 import "./interfaces/IVanaDataPermission.sol";
 
-contract AddOnlyWhitelist is IVanaDataPermission {
+contract Whitelist is IVanaDataPermission {
     address public owner;
     mapping(address => bool) whitelistedNodes;
 
