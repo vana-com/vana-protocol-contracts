@@ -1,0 +1,23 @@
+{
+  "name": "vana-protocol-contracts",
+  "version": "1.0.0",
+  "description": "A collection of contracts to run the Vana Protocol",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vana-com/vana-protocol-contracts.git"
+  },
+  "author": "Neil Zumwalde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vana-com/vana-protocol-contracts/issues"
+  },
+  "homepage": "https://github.com/vana-com/vana-protocol-contracts#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.16.1"
+  }
+}
