@@ -7,7 +7,8 @@ contract AddOnlyWhitelist is IVanaDataPermission {
     address public owner;
     mapping(address => bool) whitelistedNodes;
 
-    event Added(uint amount, uint when);
+    event Added(address node);
+    event Removed(address node);
 
     constructor() {
         owner = msg.sender;
@@ -19,6 +20,7 @@ contract AddOnlyWhitelist is IVanaDataPermission {
             "Only compute node may change permissions"
         );
         whitelistedNodes[node] = true;
+        emit Added(node);
     }
 
     function remove(address node) external {
@@ -27,6 +29,7 @@ contract AddOnlyWhitelist is IVanaDataPermission {
             "Only compute node may change permissions"
         );
         whitelistedNodes[node] = false;
+        emit Removed(node);
     }
 
     function authorized(address requesterNode) external view returns (bool) {
